@@ -20,7 +20,7 @@ export function ZodiacContainer ({selectedZodiac, onSelect} : ZodiacSelectorProp
                 <ZodiacLogo selectedZodiac={selectedZodiac} onClick={setIsActiveSelector} isActive={isActiveSelector} />
             </div>
             <div className={style['zodiac-selector'] + ' ' + (isActiveSelector ? style['active'] : '')}>
-                <ZodiacSelector selectedZodiac={selectedZodiac} onSelect={onSelect} />
+                <ZodiacSelector onSelect={onSelect} />
             </div>
         </div>
     )
