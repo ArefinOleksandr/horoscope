@@ -21,7 +21,7 @@ function seedRandomGenerator(seed: string): () => number {
 
 export function generateHoroscope (zodiac : string, days : number) : HoroscopeDay[] {
     const today = new Date();
-    let result : HoroscopeDay[] = [];
+    const result : HoroscopeDay[] = [];
 
     for(let i = 0; i < days; i++){
         const date = new Date(today);
