@@ -1,0 +1,28 @@
+
+
+.bgc{
+    background: rgb(0,22,30);
+background: var(--bg-gradient);
+color: #fff;
+min-height: 100vh
+
+}
+.bgc > section{
+    width: 65.3vw;
+    margin: 0 auto
+}
+
+.head-section{
+    padding-top: 4vw;
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+    justify-content: space-between;
+
+}
+
+.main-section{
+    
+}
+
+

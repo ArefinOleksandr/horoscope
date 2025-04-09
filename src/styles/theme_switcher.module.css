@@ -1,0 +1,12 @@
+
+
+.theme-switcher{
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    cursor: pointer;
+    border: none;
+    width: 10vw;
+    padding : .7vw 1vw;
+    border-radius: 20vw;
+    font-size: 1.389vw;
+}

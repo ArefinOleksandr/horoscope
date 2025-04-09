@@ -1,0 +1,67 @@
+
+
+.zodiac-container {
+    display: flex;
+    gap: 5vw
+}
+
+.zodiac-logo > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.zodiac-logo > div > h2{
+    font-size: 4.444vw;
+    margin-bottom: 0;
+    margin-top: 3vw;
+}
+
+.zodiac-logo > div > button {
+    cursor: pointer;
+    background-color: var(--bg-color);
+    width: 11.8vw;
+    height: 11.8vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 50%;
+    transition: all .3 ease-in-out;
+}
+.zodiac-logo > div > button > img {
+    width: 8vw;
+    height: 8vw;
+}
+
+.zodiac-selector{
+    display: none;
+
+    
+}
+
+.zodiac-selector > div > button {
+    cursor: pointer;
+    background-color: var(--bg-color);
+    border: none;
+    border-radius: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-color)
+}
+
+.zodiac-selector > div > button > img {
+    width: 50px;
+}
+.zodiac-selector.active > div {
+    display: grid;
+    grid-template-columns: repeat(4, 5vw);
+    grid-template-rows: repeat(3, 5vw);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+}
+.zodiac-selector.active{
+    display: block;
+}
