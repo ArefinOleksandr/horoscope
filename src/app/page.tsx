@@ -1,10 +1,7 @@
 "use client"
 import { generateHoroscope } from "@/utils/HoroscopeGenerator"
 import { useState, useMemo } from "react";
-import { ZodiacSelector } from "@/components/ZodiacSelector";
 import { DateRangeSelector } from "@/components/DateRangeSelector";
-import { HoroscopeCards } from "@/components/HoroscopeCards";
-import { HoroscopeDayCard } from "@/components/HoroscopeDayCard";
 
 import style from '../styles/page.module.css'
 import { ZodiacContainer } from "@/components/ZodiacContainer";

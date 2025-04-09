@@ -1,7 +1,5 @@
 import { HoroscopeDay } from "@/types/horoscope";
 
-import { useMemo, useState } from "react";
-
 import style from '../styles/main_section.module.css'
 import { formatDateToUkrainian } from "@/utils/FormatedDate";
 
