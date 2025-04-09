@@ -22,8 +22,8 @@ export function HoroscopeDayCard ({day}: HoroscopeDayCardProps){
                 <img src="/icons/Emoji.svg" alt="" />
                 <div>
                     <h2 style={{whiteSpace: 'pre-line'}}>{formatDateToUkrainian(day.date)}</h2>
-                    <div><img src="/icons/BigHealth.svg" alt="" /><span className={day.best === "health" ? 'best' : ''}>Здоров'я : {day.values.health}</span></div>
-                    <div><img src="/icons/BigCareer.svg" alt="" /><span className={day.best === "career" ? 'best' : ''}>Кар'єра : {day.values.career}</span></div>
+                    <div><img src="/icons/BigHealth.svg" alt="" /><span className={day.best === "health" ? 'best' : ''}>Здоров&apos;я : {day.values.health}</span></div>
+                    <div><img src="/icons/BigCareer.svg" alt="" /><span className={day.best === "career" ? 'best' : ''}>Кар&apos;єра : {day.values.career}</span></div>
                     <div><img src="/icons/BigLove.svg" alt="" /><span className={day.best === "love" ? 'best' : ''}>Любов : {day.values.love}</span></div>
            
                 </div>
