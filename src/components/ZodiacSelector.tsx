@@ -4,13 +4,11 @@ import {zodiacs} from '../data/zodiacs';
 
 
 interface ZodiacSelectorProps {
-    selectedZodiac : string;
     onSelect : (zodiac : string) => void;
 }
 
 
 export const ZodiacSelector = ({
-    selectedZodiac,
     onSelect
 } : ZodiacSelectorProps) => {
 

@@ -18,6 +18,7 @@ export const HoroscopeCards = ({days, currentDay, onChange} : HoroscopeInterface
     return (<div className={style['horoscope-cards']} >
         {days.map((day) => (
              <button 
+             key={day.date}
              onClick={() => onChange(day)}
                 className={(day.date === currentDay.date) ? style['active'] : ''}
                 style={days.length === 3 ? {width: '18vw'} : { width: '8.54vw'}} >

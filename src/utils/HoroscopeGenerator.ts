@@ -2,21 +2,20 @@ import { HoroscopeDay } from "@/types/horoscope";
 
 
 
-function seedRandomGenerator (seed: string) : () => number {
+function seedRandomGenerator(seed: string): () => number {
     let hash = 0;
-    console.log(seed)
 
-    for(let i = 0; i<seed.length; i++ ){
+    for (let i = 0; i < seed.length; i++) {
         hash = (hash << 5) - hash + seed.charCodeAt(i);
-        hash |= 0
+        hash |= 0;
     }
 
     return () => {
-        hash << 17;
-        hash >> 13;
-        hash << 5;
-        return ((hash >>> 0) % 10) + 1
-    }  
+        hash ^= hash << 13;
+        hash ^= hash >> 17;
+        hash ^= hash << 5;
+        return ((hash >>> 0) % 10) + 1;
+    };
 }
 
 
