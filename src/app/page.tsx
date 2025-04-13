@@ -10,12 +10,11 @@ import { MainSectionContainer } from "@/components/MainSectionContainer";
 
 export default function Page(){
   const [selectedZodiac, setSelectedZodiac] = useState('aries');
-  const [days, setDays] = useState<3 | 7>(3);
+  const [days, setDays] = useState<3 | 7>(7);
 
   const horoscope = useMemo(() => {
     return generateHoroscope(selectedZodiac, days)
 }, [selectedZodiac, days]);
-
 
   return (
     <div className={style['bgc']}>
@@ -26,7 +25,6 @@ export default function Page(){
       <section className={style['main-section']}>
         <MainSectionContainer days={horoscope} />
       </section>
-      
       
     </div>
   )

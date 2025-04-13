@@ -1,0 +1,79 @@
+
+.button {
+    $normal: black;
+    $hover: red;
+    $hover-text: white;
+    $clicked: blue;
+    $transition: 0.2s all ease-in-out;
+    border: 1px solid $normal;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: $transition;
+    overflow: hidden;
+    margin-left: 4vw;
+    background: transparent;
+    cursor: pointer;
+
+    
+    .container {
+      position: relative;
+      height: 3vw;
+      width: 25vw;
+      
+      .normal-text, .hover-text, .copied-text {
+        display: block;
+        text-align: center;
+        line-height: 3vw;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        transition: $transition;
+      }
+  
+      .normal-text {
+        opacity: 1;
+        color: $normal;
+        top: 0%;
+      }
+  
+      .hover-text, .copied-text {
+        opacity: 0;
+        top: 100%;
+        color: $hover-text;
+      }
+    }
+    
+    &.hover {
+      border-color: $hover;
+      background: $hover;
+      
+      .container {
+        .normal-text {
+          top: -100%;
+          opacity: 0;
+        }
+        
+        .hover-text {
+          top: 0%;
+          opacity: 1;
+        }
+      }
+    }
+    
+    &.copied {
+      background: $clicked;
+      border-color: $clicked;
+      
+      .container {
+        .normal-text, .hover-text {
+          top: -100%;
+        }
+        
+        .copied-text {
+          top: 0%;
+          opacity: 1;
+          color: white;
+        }
+      }
+    }
+  }
