@@ -24,11 +24,14 @@ export function MainSectionContainer({ days }: MainSectionConainerProps) {
       : days[0];
   });
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+
   useEffect(() => {
     if (!currentDay?.date) return;
     params.set("date", currentDay.date);
     router.push("?" + params.toString(), { scroll: false });
-  }, [currentDay.date, params, router]);
+    
+  }, [currentDay]);
 
   return (
     <div className={style["horoscope-main-section"]}>

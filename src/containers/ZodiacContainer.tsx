@@ -29,11 +29,13 @@ export function ZodiacContainer({ selectedZodiac, onSelect }: ZodiacSelectorProp
     handleSelectFromParams();
   }, [handleSelectFromParams]);
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+
   useEffect(() => {
     if (!selectedZodiac) return;
     params.set("zodiac", selectedZodiac);
     router.push("?" + params.toString(), { scroll: false });
-  }, [selectedZodiac, params, router]);
+  }, [selectedZodiac]);
 
   return (
     <div className={style["zodiac-container"]}>
