@@ -1,11 +1,11 @@
 "use client"
 import { generateHoroscope } from "@/utils/HoroscopeGenerator"
-import { useState, useMemo } from "react";
+import { useState, useMemo, Suspense } from "react";
 import { DateRangeSelector } from "@/components/DateRangeSelector";
 
 import style from '../styles/page.module.css'
-import { ZodiacContainer } from "@/components/ZodiacContainer";
-import { MainSectionContainer } from "@/components/MainSectionContainer";
+import { ZodiacContainer } from "@/containers/ZodiacContainer";
+import { MainSectionContainer } from "@/containers/MainSectionContainer";
 
 
 export default function Page(){
@@ -17,6 +17,7 @@ export default function Page(){
 }, [selectedZodiac, days]);
 
   return (
+    <Suspense fallback={<div>Загрузка...</div>}>
     <div className={style['bgc']}>
       <section className={style['head-section']}>
         <ZodiacContainer selectedZodiac={selectedZodiac} onSelect={setSelectedZodiac}/> 
@@ -27,5 +28,6 @@ export default function Page(){
       </section>
       
     </div>
+    </Suspense>
   )
 }
